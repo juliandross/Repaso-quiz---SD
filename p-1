@@ -1,0 +1,79 @@
+## Definición de sistema distribuido
+Conjunto de computadoras independientes interconectadas entre sí para cumplir una determinada tarea, el usuario percibe todo como si fuese una sola maquina.
+- Independientes(tienen memoria y almacenamiento propio para ejecutar sus tareas)
+- Las computadoras pueden ser no homogéneas
+Se les puede aplicar 
+1. Balanceo de cargas
+2. Servidores de respaldo
+3. Bases de datos replicadas
+## ¿Cuál es la principal diferencia entre una aplicación monolítica, una aplicación web (BackEnd y FrontEnd) y un sistema distribuido?
+- Monolítica: Tiene todos sus archivos desplegados en la misma maquina, proyecto y servidor
+- Api(Back-Front): Tiene un front que se encarga de la visual e interacción con el usuario que consume los servicios de un back en el cual se encuentra la lógica de negocio y la BD.
+- Sist. Distribuido: Tiene varias aplicaciones, servidores, puede tener varias BD y trabajan juntos para cumplir un propósito.
+## ¿Por qué un sistema distribuido necesita de una red para funcionar?
+Necesita de una red ya que sus componentes(partes) están desplegadas en varias maquinas y servidores lo que hace que sea necesario comunicarlos para que funcionen como un todo.
+Con esto se brinda escalabilidad, disponibilidad y coordinar y sincronizar mejor las tareas en general.
+
+## ¿Un sitio web es un sistema distribuido o depende de como este desarrollado?
+Si consideramos que un sitio web no tiene back, lo máximo que puede tener son interacciones pequeñas con el usuario entonces podemos decir que  **NO es un sistema distribuido**
+Ahora si tenemos otro concepto de front.
+Si el sitio web tiene front y back se podría considerar que es una red de dos nodos que se conectan entre sim podrías tener el back desplegado en una maquina diferente al front
+Si el sitio web tiene microservicios definitivamente es un sist. distribuido ya que estos microservicios tejen una red de comunicaciones entre ellos(incluyendo al front).
+
+## ¿Una aplicación web es un sistema distribuido o depende de como este desarrollado?
+Si una aplicación web es monolítica y todo corre dentro de la misma maquina podemos afirmar que no es un sistema distribuido ya que tendremos un solo nodo sin comunicación a nada.
+
+Ahora si la aplicación web cuenta con uno o más microservicios podemos decir que la aplicación web cumple con tener nodos intercomunicados que pueden correr en diferentes maquinas para cumplir el mismo propósito.
+
+## Motivación para construir Sistemas distribuidos
+
+La motivación para construir y utilizar sistemas distribuidos tiene su origen en un
+deseo de:
+
+• Compartir recursos (recursos de red)
+• Transmitir datos de la máquina local a la remota.
+• Separar las responsabilidades entre diferentes sistemas
+• Realizar tareas compartida
+
+### Computo y computación distribuida
+- Computo: cálculo u operación matemática (RAE).
+
+- Computación distribuida: operaciones o cálculos que se llevan a cabo mediante un sistema
+distribuido.
+
+-  Ejecutar en varios computadores partes de un algoritmo
+- Editar colaborativamente un archivo
+- Replicar archivos entre base de datos
+- Jugar con varios usuarios de la red
+- Ejecutar funcionalidades en diferentes sistemas
+
+## ¿Dentro de la arquitectura de WhatsApp las computadoras que intercambian mensajes son homogéneas o no?
+No homogéneas ya que puedes tener dispositivos Android, Windows, IOS etc.. intercambiando mensajes sin ningún problema de interoperabilidad.
+## ¿Desde tu perspectiva, sistemas como mercado libre o Amazon son sistemas distribuidos?
+Si, no conozco a detalle el funcionamiento interno de estas aplicaciones pero la mayoría de aplicaciones web de grandes empresas suelen utilizar modelos de microservicios para facilitar la escalabilidad, además al tratarse de empresas tan grandes como Amazon necesitan servidores en varios lugares del paneta para mantener una buena latencia.
+
+## Un poco de historia
+En el 85 nacen los microprocesadores y con ellos los ordenadores personales, esto creo a su vez la necesidad de crear redes de computadores personales, lo que terminó empujando a la creación de los sistemas distribuidos.
+## Definición de sistema en red y diferencia entre un sistema distribuido y un sistema en red
+### Sistema en red
+Unión de los ordenadores personales y las LAN se
+generaron los sistemas en red.
+
+Sistemas en Red: conjunto de computadoras
+interconectadas
+
+• Los usuarios son conscientes de la multiplicidad de
+máquinas en la red y necesitan conocerlas.
+
+• Para acceder a cada recurso deben saber en qué máquina
+está ubicado tal recurso (Dirección IP).
+
+### Sist. Distribuido 
+- En un sistema distribuido, un conjunto de computadoras independientes
+aparece ante sus usuarios como un sistema único y consistente.
+
+- En el sistema distribuido, la estructura de la red y la ubicación de los
+recursos le pasa desapercibida al usuario, ni la ve ni le importa.
+
+- En los sistemas en red, los usuarios para acceder a cada recurso deben
+saber en qué máquina está ubicado tal recurso.
