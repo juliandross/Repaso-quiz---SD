@@ -1,0 +1,98 @@
+## Elementos de una red
+- Mensajes: Todos los mensajes son convertidos a bits, señales binarias para ser enviadas
+- Medio: Es el medio por el cual viajan los datos puede ser alámbrico o inalámbrico 
+- Dispositivos: Son las maquinas que determinan la ruta que deben tomar los datos
+- Protocolos (IP, TCP, UDP)
+	Conjunto de reglas que rigen la comunicación. No especifica el lenguaje en el cual
+	debe implementarse.
+
+	- Establecen como codificar los datos.
+
+	- Como los eventos de envió y recepción se sincronizan.
+
+	 - Facilita la comunicación entre componentes de software independientes.
+### IP
+El protocolo IP establece un sistema de direcciones que identifica a cada host de forma única.
+Utilizando únicamente este protocolo los mensajes se pueden:
+• Estropear
+• Perder
+• Desordenar
+• Duplicar
+a) NO CONFIABLE NO ORIENTADO A CONEXIÓN
+b) Desde la perspectiva de este protocolo debemos hablar de paquetes
+c) Solo se encarga de enviar los paquetes IP de un host a otro host.
+### TCP 
+a) CONFIABLE ORIENTADO A CONEXIÓN
+Se asegura mediante este protocolo de no perder datos ni desordenarlos.
+b) Permite establecer un canal confiable y bidireccional.
+c) Desde la perspectiva de este protocolo debemos hablar de segmentos
+d) Utiliza el concepto de puerto, lo cual permite transferir mensajes a un proceso particular
+
+### UDP 
+a) NO CONFIABLE, NO ORIENTADO A CONEXIÓN
+Si no es necesaria la fiabilidad, y no se requiere la sobrecarga del tiempo que
+implica la comprobación del orden y llegada de todos los paquetes se puede
+utilizar este protocolo.
+
+b) Utiliza el concepto de puerto, lo cual permite transferir mensajes a un proceso
+particular.
+
+c) Es posible desarrollar protocolos de mas alto nivel que hagan fiable la comunicación.
+Elementos de una red
+## Modelo TCP/IP y Modelo OSI
+
+### - TCP/IP
+1. Capa de acceso a la red
+
+• Controla el acceso de los dispositivos de hardware a los
+medios que forman la red. Conexión a fibra óptica, cable
+coaxial, microondas.
+
+• Protocolos utilizados son: ETERNHET
+2. Capa de internet
+
+• Su objetivo es que los computadores envíen
+paquetes ip a una red y viajen a su computador
+destino de manera independiente.
+• El protocolo utilizado es el IP
+3. Capa de transporte 
+Los protocolos utilizados son:
+	3.1. TCP (Protocolo de control de transmisión)
+	3.2. UDP (Protocolo de datagramas de usuario)
+
+Su objetivo es que la información llegue de un
+proceso ubicado en el computador de origen, a un
+proceso en especifico ubicado en el computador de
+destino
+
+4. Capa de aplicación
+Contiene los protocolos del nivel mas alto. Permite que los
+mensajes se puedan intercambiar entre los programas.
+
+- Conexión remota (TELNET, SSH)
+- DNS (Sistema de Nombres de Dominio) para la resolución de direcciones IP
+- HTTP y HTTPS, para las páginas de World Wide Web
+- Transferencia de archivos (FTP)
+- Correo electrónico (SMTP)
+## Servicios orientados y no orientados a conexión
+### O.C
+Servicio para la transferencia de archivos, el cual utiliza el protocolo FTP, TCP e IP
+a) Establecimiento de la conexión
+b) Transferencia de datos
+c) Durante la transferencia no es
+necesario especificar explícitamente la
+dirección y puerto del destinatario.
+d) Fin de la conexión
+### N.O.C
+Servicio para obtener la fecha y la hora, el cual utiliza el protocolo DayTime, UDP e IP
+Durante la transferencia es necesario especificar explícitamente la dirección y puerto
+del destinatario para cada paquete.
+
+### Ejemplo de OSI por si acaso
+- **Capa de Aplicación** → Tu navegador usa **HTTP/HTTPS** para solicitar la página web.
+- **Capa de Presentación** → Si la web está encriptada (SSL/TLS), se descifran los datos.
+- **Capa de Sesión** → Se establece la conexión entre tu dispositivo y el servidor.
+- **Capa de Transporte** → Se usa **TCP** para garantizar la entrega correcta de los paquetes.
+- **Capa de Red** → Se asigna una dirección **IP** al servidor y se enruta la solicitud.
+- **Capa de Enlace de Datos** → La información se encapsula en tramas Ethernet/Wi-Fi.
+- **Capa Física** → Los bits viajan a través del cable de red o señal Wi-Fi hasta el servidor.
