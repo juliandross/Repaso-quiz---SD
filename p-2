@@ -1,0 +1,55 @@
+## CDN
+Una **CDN (Content Delivery Network)** es una red de servidores distribuidos geográficamente que almacena y entrega contenido estático (imágenes, videos, archivos, etc.) de un sitio web o aplicación web de manera rápida y eficiente.
+
+### **¿Cómo Funciona una CDN?**
+
+1. **Un usuario solicita un recurso** (ejemplo: una imagen).
+2. **El servidor más cercano en la CDN** entrega el recurso en lugar de cargarlo desde el servidor principal.
+3. **La carga es más rápida** porque la CDN reduce la latencia y el tráfico al servidor de origen.
+
+## Características de un Sistema distribuido
+- Transparencia
+-  Recursos compartidos
+-  Heterogeneidad
+- Seguridad
+- Tratamiento de fallos
+- Extensibilidad
+- Consistencia 
+- Compatibilidad
+### Recursos compartidos
+El termino recurso de red se refiere al rango de cosas que pueden ser
+compartidas en una red de computadoras. Pueden ser componentes hardware o
+software. Esta en una maquina y es gestionado por el servidor.
+Un sistema distribuido se compone de una variedad de diferentes:
+
+**middleware :** capa de software que gestiona la heterogeneidad.
+Los protocolos de internet como IP/TCP/HTTP/SOAP enmascaran las
+diferencias entre redes.
+• Redes
+• Medios de transmisión
+• Sistemas operativos
+• Hardware
+• Lenguajes de programación.
+
+## Transparencia
+- Transparencia de acceso
+- Transparencia a fallos
+- Transparencia a ubicación
+- Transparencia de replicas
+- Transparencia de migración
+- Transparencia de escalación
+## Consistencia 
+El sistema debe tener un estado único y global.
+- Consistencia de actualización(transacciones)
+- Consistencia de replica
+- Consistencia de caché
+- Consistencia de IU
+## Tratamiento de fallos 
+- Prevención del fallo
+- Recuperación del fallo
+## Seguridad
+- Cifrado
+- Autenticación
+- Rastreo
+- Integridad
+
