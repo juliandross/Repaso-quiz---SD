@@ -1,0 +1,76 @@
+## Modelo cliente servidor 
+- Servidor: Ofrece uno o varios servicios, espera la llegada de peticiones.
+- Cliente: Solicita el servicio, invoca peticiones.
+### Proceso 
+- Cada proceso tiene su propio espacio de memoria y su propia pila de ejecución.
+
+- Los procesos se pueden comunicar entre si
+
+-  Los procesos son gestionados por el sistema operativo.
+### Hilos
+- Son procesos ligeros
+- Los hilos de un proceso en ejecución se ejecutan en el mismo espacio de memoria.
+- Cada hilo tiene su propia pila de ejecución
+- Un fallo en un hilo afecta a todo el programa
+
+## Servidores secuenciales y concurrentes
+### Servidores concurrentes
+• Pueden atender a varios clientes al mismo tiempo.
+
+• Usando varios procesos de la misma maquina
+(multitarea).
+
+• Varios hilos.
+
+• Usando varios procesos en otras maquinas
+
+### Servidores secuenciales
+• Procesan una solicitud cada vez.
+
+• Las peticiones que lleguen mientras se está atendiendo a un cliente deben ser encoladas.
+
+#### Concepto de sesión
+Sesión: Interacción entre cliente y servidor
+Cada cliente entabla una sesión separada e independiente con el servidor
+El cliente conduce un diálogo con el servidor hasta obtener el servicio deseado
+
+El servidor ejecuta indefinidamente:
+Bucle continuo para aceptar peticiones de las sesiones de los clientes
+Para cada cliente el servidor conduce una sesión de servicio
+
+### ¿Cuándo usaremos un servidor secuencial?
+Cuando el tiempo medio de respuesta que observa el cliente (TR) es pequeño.
+
+Cuando la demanda de acceso sea poca.
+
+### ¿Cuándo usaremos servidores concurrentes?
+
+Cuando el tiempo medio de respuesta (TR) es grande o desconocido.
+
+Cuando la demanda de acceso sea elevada.
+
+## Conexión y sin conexión
+Los servidores con conexión utilizan TCP mientras que los servidores sin conexión usan UDP.
+### ¿Cuándo usaremos un servidor con conexión?
+Cuando la aplicación requiera fiabilidad total.
+
+### ¿Cuándo usaremos un servidor sin conexión?
+Cuando la sobrecarga computacional de la fiabilidad sea excesiva para los requerimientos (tiempo real).
+Cuando el ámbito de la aplicación sea local (LANs: baja tasa de errores) y no se requiera alta fiabilidad.
+
+## Modelo P2P
+Características
+**Descentralización**
+• Ausencia de un Servidor Central para el control
+• Los participantes pueden comunicarse directamente entre sí.
+• Todos los nodos actúan como clientes y servidores: Desaparece la organización jerárquica
+**Distribución**
+• La información no está alojada en un solo sitio
+**Redundancia de información**
+• Se duplica información para hacerla más accesible
+**Alta disponibilidad**
+• La caída de un nodo no bloquea el servicio
+
+Existen 2 posibilidades el modelo puro P2P y el híbrido
+- Puro: Todos los nodos requieren información de los otros y sirven como rutas para acceder a los archivos almacenados en cualquiera de esos nodos
+	- Hibrido: Tiene un servidor con base de datos en la cual se almacena de dirección sobre los nodos activos y sus archivos
